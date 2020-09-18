@@ -1,0 +1,44 @@
+<div class="container">    
+    <div class="row">    
+      <div class="col-md-8 form-group">    
+        <input type="file" class="form-control" (change)="uploadedFile($event)" placeholder="Upload file" accept=".xlsx">    
+      </div>    
+    </div>    
+    <div class="row">    
+      <div class="col-md-2 form-group">    
+        <button type="button" class="btn btn-info" (click)="readAsCSV()">Read as CSV</button>    
+      </div>    
+      <div class="col-md-2 form-group">    
+        <button type="button" class="btn btn-info" (click)="readAsJson()">Read as JSON</button>    
+      </div>    
+      <div class="col-md-2 form-group">    
+        <button type="button" class="btn btn-info" (click)="readAsHTML()">Read as HTML</button>    
+      </div>    
+      <div class="col-md-2 form-group">    
+        <button type="button" class="btn btn-info" (click)="readAsText()">Read as Text</button>    
+      </div>    
+    </div>   
+    <div>
+        <table style="width:100%"> 
+            <thead>
+                <tr>
+                <th>Sr_No</th>
+                <th>Product_Id</th>
+                <th>Product_Name</th>
+                <th>Price</th>
+                <th>Product_Description</th>
+             </tr>
+            </thead>
+            <tbody> 
+                <tr *ngFor="let objects of obj">
+                <td>{{objects.Sr_No}}</td>
+                <td>{{objects.Product_Id}}</td>
+                <td>{{objects.Product_Name}}</td>
+                <td>{{objects.Price}}</td>
+                <td>{{objects.Product_Description}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div> 
+  </div>     
+  

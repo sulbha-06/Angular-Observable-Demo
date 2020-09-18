@@ -1,0 +1,11 @@
+
+<h1>Receiver Component</h1>
+
+<div class="card mb-3">
+    <h4 class="card-header">Angular 8 Component Communication</h4>
+    <input [(ngModel)]="message" #ctrlName="ngModel" required>
+    <div class="card-body">
+        <button (click)="sendMessage()" class="btn btn-primary mr-2">Send Message</button>
+        <button (click)="clearMessages()" class="btn btn-secondary">Clear Messages</button>
+    </div>
+</div>
